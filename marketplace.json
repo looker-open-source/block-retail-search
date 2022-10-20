@@ -1,0 +1,29 @@
+{
+  "label": "Discovery: E-Commerce Insights",
+  "category_label": "Models",
+  "branding": {
+    "image_uri": "https://marketplace-api.looker.com/block-icons/google-cloud.png",
+    "tagline": "This block is compatible with Retail API data, and contains visualizations that help you assess and improve your e-commerce website."
+  },
+
+  "constants": {
+    "EVENTS_TABLE": {
+      "label": "Events Table",
+    },
+    "PRODUCTS_TABLE": {
+      "label": "Products Table"
+    },
+    "SALES_MATERIALIZED_VIEW": {
+      "label": "Sales Materialized View"
+    },
+    "CONNECTION": {
+      "label": "Connection"
+    },
+  },
+  "models": [
+    {
+      "name": "base",
+      "connection_constant": "CONNECTION"
+    }
+  ]
+}
