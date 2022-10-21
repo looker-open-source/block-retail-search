@@ -25,7 +25,7 @@
     - **Marketplace** Installation via the Looker Marketplace will prompt configuration of the Looker BigQuery connection desired for use with this block.
 
 * **Customization**
-    - **Refinements** This block uses refinements for customization. For more information on using refinements to customize marketplace blocks, please see [this documentation] (https://docs.looker.com/data-modeling/marketplace/customize-blocks).
+    - **Refinements** This block uses refinements for customization. For more information on using refinements to customize marketplace blocks, please see [this documentation](https://docs.looker.com/data-modeling/marketplace/customize-blocks).
 
  * **[Optional] Change daily PDT trigger** - The default PDT trigger (00:00 UTC) is not selected for any particular timezone, so you may want to offset it so that it does not trigger during your peak hours.
 
