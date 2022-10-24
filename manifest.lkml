@@ -1,3 +1,5 @@
+project_name: "block-retail-search"
+
 ################ Constants ################
 
 constant: EVENTS_TABLE {
