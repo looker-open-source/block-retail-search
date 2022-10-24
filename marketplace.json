@@ -22,7 +22,7 @@
     },
     "models": [
       {
-        "name": "base",
+        "name": "retail_events",
         "connection_constant": "CONNECTION"
       }
     ]
