@@ -7,7 +7,7 @@
   elements:
   - title: Purchase Events
     name: Purchase Events
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.count_of_purchase_events, events.period]
@@ -47,7 +47,7 @@
     height: 2
   - title: Average Basket Size
     name: Average Basket Size
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, order_facts.average_basket_size]
@@ -94,7 +94,7 @@
     height: 2
   - title: Average Basket Size (Copy)
     name: Average Basket Size (Copy)
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, order_facts.average_tx_total]
@@ -132,7 +132,7 @@
     height: 2
   - title: Average Basket Size (Copy 2)
     name: Average Basket Size (Copy 2)
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, events.percentage_of_sessions_converted]
@@ -174,7 +174,7 @@
     height: 2
   - title: Total Sales
     name: Total Sales
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, order_facts.total_tx_total]
@@ -216,7 +216,7 @@
     height: 3
   - title: Sessions vs Purchase Events
     name: Sessions vs Purchase Events
-    model: base
+    model: retail_events
     explore: events
     type: looker_line
     fields: [events.event_date, events.percentage_of_sessions_converted, events.count_of_sessions,
@@ -291,7 +291,7 @@
     height: 7
   - title: Average Basket Size Over Time
     name: Average Basket Size Over Time
-    model: base
+    model: retail_events
     explore: events
     type: looker_column
     fields: [order_facts.average_basket_size, events.event_date]
@@ -345,7 +345,7 @@
     height: 2
   - title: Average Sale Over Time
     name: Average Sale Over Time
-    model: base
+    model: retail_events
     explore: events
     type: looker_column
     fields: [events.event_date, order_facts.average_tx_total]
@@ -408,7 +408,7 @@
     height: 2
   - title: Total Sessions
     name: Total Sessions
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, sessions.count_of_sessions]
@@ -475,7 +475,7 @@
     height: 3
   - title: Bounce Percentage
     name: Bounce Percentage
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, sessions.percent_bounce_sessions]
@@ -541,7 +541,7 @@
     height: 2
   - title: Duration
     name: Duration
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, sessions.average_duration]
@@ -607,7 +607,7 @@
     height: 2
   - title: Events Per Session
     name: Events Per Session
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [sessions.average_events_in_session, events.period]
@@ -646,7 +646,7 @@
     height: 2
   - title: LTV
     name: LTV
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, visitor_facts.average_ltv]
@@ -693,7 +693,7 @@
     height: 2
   - title: Session Funnel
     name: Session Funnel
-    model: base
+    model: retail_events
     explore: events
     type: looker_funnel
     fields: [sessions.all_sessions, sessions.count_product_or_later,
@@ -772,7 +772,7 @@
     height: 6
   - title: Cart to Conversion
     name: Cart to Conversion
-    model: base
+    model: retail_events
     explore: events
     type: looker_funnel
     fields: [sessions.count_cart_or_later, sessions.count_purchase]
@@ -868,7 +868,7 @@
     height: 1
   - title: Sessions to Search
     name: Sessions to Search
-    model: base
+    model: retail_events
     explore: events
     type: looker_funnel
     fields: [sessions.all_sessions, sessions.count_product_or_later]
@@ -946,7 +946,7 @@
     height: 3
   - title: Sessions Sparkline
     name: Sessions Sparkline
-    model: base
+    model: retail_events
     explore: events
     type: looker_line
     fields: [sessions.count_of_sessions, events.event_date]
@@ -994,7 +994,7 @@
     height: 2
   - title: Cart Abandonment Rate (Search Sessions vs No Search Session)
     name: Cart Abandonment Rate (Search Sessions vs No Search Session)
-    model: base
+    model: retail_events
     explore: events
     type: looker_column
     fields: [sessions.cart_abandonment_rate, sessions.session_start_week, search_session]
@@ -1092,7 +1092,7 @@
     height: 1
   - title: Bounce Rate (Search Sessions vs No Search Session)
     name: Bounce Rate (Search Sessions vs No Search Session)
-    model: base
+    model: retail_events
     explore: events
     type: looker_column
     fields: [sessions.session_start_week, search_session, sessions.percent_bounce_sessions]
@@ -1175,7 +1175,7 @@
     height: 2
   - title: Top Sold Products
     name: Top Sold Products
-    model: base
+    model: retail_events
     explore: events
     type: looker_grid
     fields: [products.title, product_details.total_sales, product_details.total_quantity,
@@ -1301,7 +1301,7 @@
     height: 6
   - title: Top Sold Categories
     name: Top Sold Categories
-    model: base
+    model: retail_events
     explore: events
     type: looker_grid
     fields: [product_details.total_sales, product_details.total_quantity, events.average_purchase_product,
@@ -1429,7 +1429,7 @@
     height: 6
   - title: Unique Products Purchases
     name: Unique Products Purchases
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, products.count_of_unique_products]
@@ -1484,7 +1484,7 @@
     height: 2
   - title: Product Result Size
     name: Product Result Size
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, events.average_search_product_results]
@@ -1539,7 +1539,7 @@
     height: 2
   - title: Most Prevalent Categories in Search Results
     name: Most Prevalent Categories in Search Results
-    model: base
+    model: retail_events
     explore: events
     type: looker_wordcloud
     fields: [events.count_of_search_events, categories.tbl_products__categories]
@@ -1590,7 +1590,7 @@
     height: 6
   - title: Most Prevalent Brands in Search Results
     name: Most Prevalent Brands in Search Results
-    model: base
+    model: retail_events
     explore: events
     type: looker_wordcloud
     fields: [events.count_of_search_events, brands.tbl_products__brands]
@@ -1641,7 +1641,7 @@
     height: 6
   - title: Unique Brands Sold
     name: Unique Brands Sold
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, brands.count_of_unique_brands]
@@ -1747,7 +1747,7 @@
     height: 1
   - title: Unique Categories Purchased
     name: Unique Categories Purchased
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, categories.count_of_unique_categories]
@@ -1817,7 +1817,7 @@
     height: 1
   - title: Page Views Per Category
     name: Page Views Per Category
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, categories.count_of_unique_categories, events.count_of_detail_page_views]
@@ -1889,7 +1889,7 @@
     height: 2
   - title: Cart Adds Per Category
     name: Cart Adds Per Category
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, categories.count_of_unique_categories, events.count_of_add_to_cart_events]
@@ -1976,7 +1976,7 @@
       type: relative_timeframes
       display: inline
       options: []
-    model: base
+    model: retail_events
     explore: events
     listens_to_filters: []
     field: events.current_date_range
