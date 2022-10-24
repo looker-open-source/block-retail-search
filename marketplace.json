@@ -7,8 +7,7 @@
     },
     "constants": {
       "EVENTS_TABLE": {
-        "label": "Events Table",
-        "value_constraint": "connection"
+        "label": "Events Table" 
       },
       "PRODUCTS_TABLE": {
         "label": "Products Table"
@@ -17,7 +16,8 @@
         "label": "Sales Materialized View"
       },
       "CONNECTION": {
-        "label": "Connection"
+        "label": "Connection",
+          "value_constraint": "connection"
       }
     },
     "models": [
