@@ -3,7 +3,7 @@
     "category_label": "Models",
     "branding": {
       "image_uri": "https://marketplace-api.looker.com/block-icons/google-cloud.png",
-      "tagline": "This block is compatible with Retail API data, and contains visualizations that help you assess and improve your e-commerce website."
+      "tagline": "Get insights on your e-commerce website, customer flow, and product performance."
     },
     "constants": {
       "EVENTS_TABLE": {
