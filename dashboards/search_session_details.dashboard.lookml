@@ -7,7 +7,7 @@
   elements:
   - title: Search Session Details
     name: Search Session Details
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.count_of_search_query]
@@ -48,7 +48,7 @@
     height: 2
   - title: Average Search Queries - Purchase vs No Purchase
     name: Average Search Queries - Purchase vs No Purchase
-    model: base
+    model: retail_events
     explore: events
     type: looker_column
     fields: [sessions.average_search_queries_per_session, purchase]
@@ -127,7 +127,7 @@
     height: 6
   - title: Sessions Include Search (Yes/No)
     name: Sessions Include Search (Yes/No)
-    model: base
+    model: retail_events
     explore: events
     type: looker_pie
     fields: [sessions.includes_search_events, sessions.count_of_sessions]
@@ -183,7 +183,7 @@
     height: 6
   - title: Query Word Cloud
     name: Query Word Cloud
-    model: base
+    model: retail_events
     explore: events
     type: looker_wordcloud
     fields: [events.search_query, events.count_of_sessions]
@@ -207,7 +207,7 @@
     height: 6
   - title: Avg Time Search to Page View
     name: Avg Time Search to Page View
-    model: base
+    model: retail_events
     explore: events
     type: marketplace_viz_radial_gauge::radial_gauge-marketplace
     fields: [session_event_sequences.average_time_browsing_results]
@@ -273,7 +273,7 @@
     height: 5
   - title: Search Sessions
     name: Search Sessions
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [sessions.count_with_search_events, events.period]
@@ -313,7 +313,7 @@
     height: 2
   - title: Search to Page View Time vs Conversion
     name: Search to Page View Time vs Conversion
-    model: base
+    model: retail_events
     explore: events
     type: looker_area
     fields: [session_event_sequences.average_time_browsing_results, sessions.overall_conversion,
@@ -385,7 +385,7 @@
     height: 7
   - title: Conversion Rate by Search Attempts
     name: Conversion Rate by Search Attempts
-    model: base
+    model: retail_events
     explore: events
     type: looker_column
     fields: [searches, sessions.overall_conversion]
@@ -445,7 +445,7 @@
     height: 6
   - title: Search Events
     name: Search Events
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, events.count_of_search_events]
@@ -491,7 +491,7 @@
     height: 2
   - title: Search-to-Page View Rate
     name: Search-to-Page View Rate
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [session_event_sequences.click_through_rate, events.period]
@@ -530,7 +530,7 @@
     height: 2
   - title: Search-to-Purchase
     name: Search-to-Purchase
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [events.period, session_event_sequences.purchase_rate_per_search]
@@ -585,7 +585,7 @@
     height: 1
   - title: Search Session Conversion Rate
     name: Search Session Conversion Rate
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [sessions.overall_conversion, events.period]
@@ -636,7 +636,7 @@
     height: 1
   - title: Searches Before Page View
     name: Searches Before Page View
-    model: base
+    model: retail_events
     explore: events
     type: single_value
     fields: [session_event_sequences.average_events_between_search_and_page_view]
@@ -685,7 +685,7 @@
     height: 1
   - title: Event to Next Event Sankey
     name: Event to Next Event Sankey
-    model: base
+    model: retail_events
     explore: events
     type: marketplace_viz_sankey::sankey-marketplace
     fields: [session_event_sequences.event_type, session_event_sequences.count, bounce_1]
@@ -756,7 +756,7 @@
     height: 1
   - title: Event After Search
     name: Event After Search
-    model: base
+    model: retail_events
     explore: events
     type: looker_bar
     fields: [session_event_sequences.event_type, session_event_sequences.count, bounce_1]
@@ -841,7 +841,7 @@
     height: 5
   - title: Event After Page View
     name: Event After Page View
-    model: base
+    model: retail_events
     explore: events
     type: looker_bar
     fields: [session_event_sequences.event_type, session_event_sequences.count, bounce_1]
@@ -934,7 +934,7 @@
       type: relative_timeframes
       display: inline
       options: []
-    model: base
+    model: retail_events
     explore: events
     listens_to_filters: []
     field: events.current_date_range
