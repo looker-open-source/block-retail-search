@@ -170,17 +170,17 @@ view: tbl_events {
     sql: ${session_id} ;;
   }
 
-  dimension: user_id {
-    view_label: "User"
-    type: string
-    sql: TRIM(UPPER(${TABLE}.user_id)) ;;
-  }
+  # dimension: user_id {
+  #   view_label: "User"
+  #   type: string
+  #   sql: TRIM(UPPER(${TABLE}.user_id)) ;;
+  # }
 
   measure: count_of_users {
     view_label: "User"
     label: "Count of Users"
     type: count_distinct
-    sql: ${user_id} ;;
+    sql: ${user_info.user_id} ;;
   }
 
   dimension: visitor_id {
@@ -311,7 +311,7 @@ view: tbl_events {
     label: "Total Converted Users"
     type: count_distinct
     filters: [is_purchase_complete: "Yes",is_array_above_zero: "Yes"]
-    sql: ${user_id} ;;
+    sql: ${user_info.user_id} ;;
   }
 
   measure: percentage_of_users_converted {
@@ -322,7 +322,34 @@ view: tbl_events {
     value_format_name: percent_4
   }
 
+dimension: user_info {
+  hidden: yes
+  sql: ${TABLE}.user_info;;
 }
+
+}
+
+#### USER INFO ####
+
+
+
+
+view: tbl_events__user_info {
+  dimension:user_id {
+    primary_key: yes
+    view_label: "User"
+    type: number
+    sql: user_id  ;;
+  }
+
+  dimension: tbl_events__user_info {
+    type: string
+    hidden: yes
+    sql: tbl_events__user_info ;;
+  }
+
+}
+
 
 #### PRODUCT DETAILS ####
 

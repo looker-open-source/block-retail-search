@@ -19,6 +19,13 @@ explore: events {
     relationship: one_to_many
   }
 
+  join: user_info {
+    view_label: "User"
+    from: tbl_events__user_info
+    sql: LEFT JOIN UNNEST([user_info]) as tbl_events__user_info ;;
+    relationship: one_to_many
+  }
+
   join: sessions {
     type: left_outer
     sql_on: ${events.session_id} = ${sessions.session_id} ;;
