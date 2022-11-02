@@ -2,7 +2,7 @@ view: sessions {
   derived_table: {
     explore_source: events {
       column: session_id {}
-      column: user_id {}
+      column: user_id {field: user_info.user_id}
       column: count {}
       column: count_of_add_to_cart_events {}
       column: count_of_detail_page_views {}
