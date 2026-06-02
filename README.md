@@ -1,3 +1,5 @@
+This is not an officially supported Google product. This project is not eligible for the [Google Open Source Software Vulnerability Rewards Program](https://bughunters.google.com/open-source-security).
+
 ### What does this Block do for me?
 
 **(1) Understand your business** - Quickly and easily assess the state of your retail business in terms of revenue, order value, purchases, and more.
@@ -8,18 +10,14 @@
 
 **(4) Assess search performance** - Assess the performance of Google Retail Search and its impact on your business. See the add-to-carts, purchases, and total sales that were generated from customer searches. See top search terms,  total number of searches, and more.
 
-
 ### Block Structure
 
 **Dashboards** - Due to the nature in which this data is displayed, this Block only exposes Dashboards as starting points for exploration, rather than using individual "Explore" pages. Start from a dashboard, then drill into any tile to start free-form exploration.
-
 
 ### Implementation Instructions / Customizations ##
 
 * **Connection and Permission**
     - For information about prerequisites, Looker set-up, connecting to Google BigQuery, and creating a materialized view for sales, see [Get dashboards that show key performance indicators](https://cloud.google.com/retail/docs/get-dashboards-that-show-kpis) in the Google Retail API documentation.
-
-
 
 * **Installation**
     - **Marketplace** Installation via the Looker Marketplace will prompt configuration of the Looker BigQuery connection desired for use with this block.
@@ -30,7 +28,6 @@
  * **[Optional] Change daily PDT trigger** - The default PDT trigger (00:00 UTC) is not selected for any particular timezone, so you may want to offset it so that it does not trigger during your peak hours.
 
  * **[Optional] Unhide Explores** - Explores are hidden by default.
-
 
 ### How do I optimize the performance of my database?
 
